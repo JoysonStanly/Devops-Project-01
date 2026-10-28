@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   reactCompiler: true,
   turbopack: {},
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
