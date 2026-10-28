@@ -1,0 +1,19 @@
+ci_cd:
+  enabled: true
+  platform: github-actions
+deployment:
+  environments: single
+  strategy: rolling
+infrastructure:
+  provider: aws
+  type: aws-vpc-eks
+observability:
+  level: prometheus-grafana
+  monitoring: true
+project:
+  description: 'DevOps project: devops-project'
+  name: devops-project
+  version: 1.0.0
+security:
+  compliance: true
+  level: nist-csf
